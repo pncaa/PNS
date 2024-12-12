@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container .foto-pns {
+    flex: 1;
+    width: 60%;
+}
+
+.container .foto-pns .pns {
+    height: 100vh;
+    width: auto;
+}
+
+.container .teks {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .teks .atas {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10vh;
+}
+
+.atas a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.atas button {
+    width: 100px;
+    height: 25px;
+    background-color: #F7AAAC;
+    border: none;
+    border-radius: 40px;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.atas .user {
+    height: 25px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.container .teks .tengah {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+}
+
+.tengah img {
+    height: 200px;
+    width: auto;
+    padding-bottom: 20px;
+}
+
+.tengah h4 {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.tengah h1 {
+    font-size: 50px;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.container .teks .bawah {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bawah img {
+    width: 150px;
+    height: auto;
+}

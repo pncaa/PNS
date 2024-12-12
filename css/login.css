@@ -1,0 +1,193 @@
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+    margin: 0;
+}
+
+.container .nav {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.nav .nav-teks {
+    height: 60px;
+    width: 70%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.nav img {
+    height: 110px;
+    width: auto;
+}
+
+.container .login {
+    gap: 20px;
+    width: 40%;
+    height: 45%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.login .login-username,
+.login-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+}
+
+.login span {
+    padding-bottom: 8px;
+    font-size: 15px;
+}
+
+.login input {
+    border: 1px solid black;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.login button {
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    background: black;
+}
+
+.login button:hover {
+    color: black;
+    background: white;
+    border: 2px solid black;
+}
+
+.container .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    padding: 1.4rem 5%;
+    background: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer-kiri img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-tengah h1 {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-kanan {
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+td img {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.popup {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    padding: 0;
+    z-index: 9999;
+}
+
+.hidden{
+    display: none;
+}
+
+.popup .popup-konten {
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px 5%;
+}
+
+.popup .popup-konten h2{
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.popup .popup-konten p{
+    font-size: 12px;
+}
+
+.popup .popup-konten .button{
+   display: flex;
+   justify-content: flex-end;
+   gap: 20px;
+}
+
+.button button{
+    width: 70px;
+    height: 25px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.button button:hover{
+    background: white;
+    color: black;
+    border: 2px solid black;
+}

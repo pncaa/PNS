@@ -1,0 +1,210 @@
+.navbar {
+
+    width: 100%;
+    height: 17vh;
+    padding: 0;
+    background: brown;
+    display: flex;
+
+}
+
+.navbar .navbar-logo {
+    width: 10%;
+    height: 100px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img {
+    height: 90px;
+    width: auto;
+}
+
+.navbar .navbar-nav {
+    width: 90%;
+    height: 100px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .teks {
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar-nav .nav-main {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5%;
+}
+
+.nav-main a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-main a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-nav .logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 25px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-nav .logout:hover {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    width: 100vw;
+    height: 83vh;
+    display: flex;
+    padding: 25px;
+    gap: 2vw;
+}
+
+.container .sidebar {
+    width: 21vw;
+    height: auto;
+    display: flex;
+
+}
+
+.sidebar .profil {
+    width: 20vw;
+    height: 60vh;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profil .teks{
+    width: 15vw;
+    height: 50px;
+    background-color: brown;
+    border-radius: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.profil .biodata{
+    padding: 10px;
+}
+
+.biodata table{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table td{
+    height: 3rem;
+   
+}
+
+.td1,.td2,.td3{
+    border-bottom: 0.5px solid black;
+}
+
+.td1{
+    width: 40%;
+    text-align: start;
+}
+
+.td2{
+    width: 4%;
+}
+
+.td3{
+    text-align: start;
+}
+
+table img{
+    width: 80px;
+    height: auto;
+}
+
+.container .utama {
+    width: 77vw;
+    height: auto;
+}
+
+.utama .foto-wrapper {
+    position: relative;
+    max-width: 55vw;
+    margin: 0 auto;
+}
+
+.foto-wrapper .foto {
+    border-radius: 20px;
+    display: flex;
+    height: 75vh;
+    width: 55vw;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+
+.foto-wrapper img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.utama-foto .slider {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 1rem;
+    width: 2.5rem;
+    height: 1rem;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.5;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.slider a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider a:hover{
+    opacity: 1;
+}
+
