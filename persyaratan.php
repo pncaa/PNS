@@ -1,3 +1,9 @@
+<?php
+session_start();
+require 'functions.php';
+ceckLogin();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +27,8 @@
 
             <div class="sidebar-atas">
                 <img src="icons/user.png" alt="">
-                <h5>nama</h5>
-                <h5>nip</h5>
+                <h5><?php echo htmlspecialchars($_SESSION['nama']); ?></h5>
+                <h5><?php echo htmlspecialchars($_SESSION['username']); ?></h5>
             </div>
 
             <div class="sidebar-tengah">
@@ -46,7 +52,7 @@
         <div class="main-wrapper">
             <div class="navbar">
                 <h1>SYARAT/KETENTUAN KENAIKAN PANGKAT</h1>
-                <button class="logout">Logout</button>
+                <a href="logout.php"><button class="logout">Logout</button></a>
             </div>
             <!-- end navbar -->
             <!-- start content -->

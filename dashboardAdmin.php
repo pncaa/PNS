@@ -1,3 +1,8 @@
+<?php
+session_start();
+require 'functions.php';
+ceckLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +31,7 @@
                 <a href="kelola.php">Kelola Pengajuan</a>
                 <a href="tambahData.php">Tambah Data</a>
             </div>
-            <button class="logout">Logout</button>
+            <a href="logout.php"><button class="logout">Logout</button></a>
         </div>
     </div>
     <!-- end navbar -->
@@ -45,27 +50,27 @@
                             <td colspan="3"><img src="icons/user-black.png" alt=""></td>
                         </tr>
                         <tr>
-                            <td colspan="3">nama saya</td>
+                            <td colspan="3"><?php echo htmlspecialchars($_SESSION['nama']); ?></td>
                         </tr>
                         <tr>
                             <td class="td1">No. HP</td>
                             <td class="td2">:</td>
-                            <td class="td3">blabla</td>
+                            <td class="td3"><?php echo htmlspecialchars($_SESSION['no_hp']); ?></td>
                         </tr>
                         <tr>
                             <td class="td1">Username</td>
                             <td class="td2">:</td>
-                            <td class="td3">blabla</td>
+                            <td class="td3"><?php echo htmlspecialchars($_SESSION['usn']); ?></td>
                         </tr>
                         <tr>
                             <td class="td1">Jenis Kelamin</td>
                             <td class="td2">:</td>
-                            <td class="td3">blabla</td>
+                            <td class="td3"><?php echo htmlspecialchars($_SESSION['jenis_kelamin']); ?></td>
                         </tr>
                         <tr>
                             <td class="td1">Email</td>
                             <td class="td2">:</td>
-                            <td class="td3">blabla</td>
+                            <td class="td3"><?php echo htmlspecialchars($_SESSION['email']); ?></td>
                         </tr>
                     </table>
                 </div>

@@ -1,45 +1,61 @@
 <?php
-// Mock database (simulasi data dari database)
-$users = [
-    ['username' => 'admin', 'password' => '12345', 'role' => 'admin'],
-    ['username' => 'user1', 'password' => 'password1', 'role' => 'user']
-];
+session_start();
+require 'koneksi.php';
 
-// Inisialisasi variabel untuk kontrol popup
 $popupBerhasil = false;
 $popupGagal = false;
 $popupInput = false;
-$userRole = null; // Untuk menyimpan role pengguna setelah login berhasil
+$userRole = null;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Ambil input dari form
-    $username = trim($_POST['username'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+if (isset($_POST["submit"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    // Validasi input kosong
     if (empty($username) || empty($password)) {
-        $popupInput = true; // Input kosong
+        $popupInput = true;
     } else {
-        // Simulasi pengecekan data user
-        $isLoginSuccess = false;
+        $query = "SELECT u.*, 
+                    d.nama, 
+                    d.no_hp, 
+                    d.username, 
+                    d.jenis_kelamin, 
+                    d.email, 
+                    p.status
+                FROM users u
+                JOIN data_user d ON u.user_id = d.id
+                LEFT JOIN data_pengajuan p ON d.id = p.data_user_id
+                WHERE u.nip = '$username'
+                ORDER BY p.id DESC
+                LIMIT 1;
+                ";
+        $result = mysqli_query($koneksi, $query);
 
-        foreach ($users as $user) {
-            if ($user['username'] === $username && $user['password'] === $password) {
-                $isLoginSuccess = true;
-                $userRole = $user['role']; // Simpan role pengguna
-                break;
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user = mysqli_fetch_assoc($result);
+
+            if ($user && password_verify($password, $user["password"])) {
+                $_SESSION["username"] = $user["nip"];
+                $_SESSION["role"] = $user["role"];
+                $_SESSION["user_id"] = $user["user_id"];
+                $_SESSION["nama"] = $user["nama"];
+                $_SESSION["no_hp"] = $user["no_hp"];
+                $_SESSION["usn"] = $user["username"]; 
+                $_SESSION["jenis_kelamin"] = $user["jenis_kelamin"];
+                $_SESSION["email"] = $user["email"];
+                $_SESSION["status"] = $user["status"];
+
+                $popupBerhasil = true;
+                $userRole = $user["role"];
+            } else {
+                $popupGagal = true;
             }
-        }
-
-        // Berikan status popup berdasarkan hasil login
-        if ($isLoginSuccess) {
-            $popupBerhasil = true;
         } else {
             $popupGagal = true;
         }
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -80,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <span id="password">Password</span>
                     <input type="password" class="password" id="password" name="password">
                 </div>
-                <button type="submit">LOGIN</button>
+                <button type="submit" name="submit">LOGIN</button>
             </form>
         </div>
         <!-- end login -->

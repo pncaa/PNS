@@ -1,3 +1,28 @@
+<?php
+session_start();
+require 'koneksi.php';
+require 'functions.php';
+ceckLogin();
+
+if (isset($_POST['approve']) || isset($_POST['reject'])) {
+    $id = $_POST['id'];
+    $statusBaru = isset($_POST['approve']) ? 'approved' : 'rejected';
+
+    $query_update = "UPDATE data_pengajuan SET status = '$statusBaru' WHERE id = '$id'";
+
+    if (mysqli_query($koneksi, $query_update)) {
+        echo "<script>
+                alert('Status berhasil diperbarui'); 
+                window.location.href = 'kelola.php';
+              </script>";
+    } else {
+        echo "Gagal memperbarui";
+    }
+}
+
+$query_tampil = "SELECT * FROM data_pengajuan";
+$result_tampil = mysqli_query($koneksi, $query_tampil);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +70,7 @@
             <!-- start navbar -->
             <div class="navbar">
                 <h1>DATA PENGAJUAN</h1>
-                <button class="logout">Logout</button>
+                <a href="logout.php"><button class="logout">Logout</button></a>
             </div>
             <!-- end navbar -->
             <!-- start content -->
@@ -60,15 +85,37 @@
                         <th class="th4">Pengajuan</th>
                         <th class="th3">Action</th>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><button class="approve">Approve</button> <button class="nonapprove">No</button></td>
-                    </tr>
+                    <?php
+                    if ($result_tampil && mysqli_num_rows($result_tampil) > 0) {
+                        $no = 1;
+                        while ($data = mysqli_fetch_assoc($result_tampil)) {
+                            echo "<tr>";
+                            echo "<td>" . $no++ . "</td>";
+                            echo "<td>" . $data['nama'] . "</td>";
+                            echo "<td>" . $data['nip'] . "</td>";
+                            echo "<td>" . $data['pangkat'] . "</td>";
+                            echo "<td>" . $data['instansi'] . "</td>";
+                            echo "<td><a href='" . $data['file_path'] . "'>Lihat File</a></td>";
+                            
+                            echo "<td>";
+                            echo "<form method='POST' action=''>";
+                            echo "<input type='hidden' name='id' value='" . $data['id'] . "'>";
+                            echo "<input type='hidden' name='current_status' value='" . $data['status'] . "'>";
+                            if ($data['status'] === 'pending') {
+                                echo "<button type='submit' name='approve' class='approve'>Approve</button>";
+                                echo "<button type='submit' name='reject' class='nonapprove'>Reject</button>";
+                            } else {
+                                echo "<span>" . ucfirst($data['status']) . "</span>";
+                            }
+                            echo "</form>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='7'>Data tidak tersedia</td></tr>";
+                    }
+                    ?>
+
                 </table>
             </div>
             <!-- end content -->
