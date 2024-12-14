@@ -7,6 +7,7 @@
 }
 
 .container .sidebar {
+    position: fixed;
     height: 100vh;
     width: 15vw;
     background-color: black;
@@ -15,6 +16,7 @@
     flex-direction: column;
     padding: 8rem 1rem;
     text-align: center;
+    z-index: 999;
 }
 
 .sidebar .teks {
@@ -79,11 +81,13 @@
 }
 
 .container .main-wrapper {
-    width: 85vw;
-    height: 100vh;
+    padding-left: 15vw;
+    width: 80vw;
+    height: 100%;
 }
 
 .main-wrapper .navbar {
+    position: fixed;
     width: 85vw;
     height: 10vh;
     display: flex;
@@ -114,6 +118,7 @@
 
 .main-wrapper .main {
     padding: 30px;
+    padding-top: 12vh;
 }
 
 /* start css file kelola.php */
@@ -292,6 +297,7 @@ option {
     background-color: white;
     color: black;
 }
+
 /* end css file persyartan.php */
 
 /* start css file pengajuan.php */
@@ -340,9 +346,12 @@ option {
     font-size: 14px;
 }
 
- .submit {
+.wrapper-submit {
+    padding-top: 30px;
+}
+
+.submit {
     position: absolute;
-    bottom: 30px;
     right: 30px;
     width: 100px;
     height: 25px;
@@ -353,7 +362,7 @@ option {
     cursor: pointer;
 }
 
- .submit:hover {
+.submit:hover {
     border: 2px solid black;
     background-color: white;
     color: black;

@@ -59,9 +59,65 @@ ceckLogin();
             <div class="main">
                 <div class="dropdown-wrapper">
                     <div class="dropdown">
-                        <button class="dropdown-btn">Peraturan 1 <img src="icons/dropdown.png" alt=""></button>
+                        <button class="dropdown-btn">Kenaikan Pangkat Reguler : <img src="icons/dropdown.png" alt=""></button>
                         <div class="dropdown-content">
-                            <p>Isi dari peraturan pertama. Pastikan untuk mematuhi ketentuan yang sudah ditetapkan.</p>
+                            <li>SK CPNS dan SK PNS</li>
+                            <li>SK Kenaikan Pangkat Terakhir</li>
+                            <li>SK Jabatan Lama dan Baru</li>
+                            <li>Telah membuat data kinerja melalui aplikasi e-kinerja Kementerian Perhubungan</li>
+                            <li>Telah membuat data kinerja melalui aplikasi e-kinerja Kementerian Perhubungan</li>
+                            <li>SKP, Realisasi, Evaluasi Kinerja 2 (dua) tahun terakhir (1 paket masing-masing maksimal 2MB)</li>
+                            <li>Sertifikat Lulus Ujian Dinas (Bagi yang akan pindah golongan dari II/d ke III/a)</li>
+                            <li> Uraian Tugas lama dan baru sesuai jabatannya, dan sudah 4 (empat) tahun dalam pangkat terakhir.</li>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Kenaikan Pangkat Pilihan Jabatan Fungsional Tertentu <img src="icons/dropdown.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <li>SK CPNS dan SK PNS</li>
+                            <li>SK Kenaikan Pangkat Terakhir</li>
+                            <li>SK Jabatan Lama dan Baru</li>
+                            <li>Berita Acara Pelantikan, SPMT, SPMJ</li>
+                            <li>PAK Integrasi dan PAK Konversi</li>
+                            <li>Telah membuat data kinerja melalui aplikasi e-kinerja Kementerian Perhubungan</li>
+                            <li>SKP, Realisasi, Evaluasi Kinerja 2 (dua) tahun terakhir (1 paket masing-masing maksimum 2MB)</li>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Kenaikan Pangkat Penyesuaian Ijazah (minimal 1 tahun dari KP terakhir)<img src="icons/dropdown.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <li>SK CPNS dan SK PNS</li>
+                            <li>SK Kenaikan Pangkat Terakhir</li>
+                            <li>SK Tugas Belajar</li>
+                            <li>Akreditasi Program Studi / Jurusan Pendidikan</li>
+                            <li>Telah membuat data kinerja melalui aplikasi e-kinerja Kementerian Perhubungan</li>
+                            <li>SKP, Realisasi, Evaluasi Kinerja 2 (dua) tahun terakhir (1 paket masing-masing maksium 2MB)</li>
+                            <li>Sertifikat Lulus Ujian Penyesuaian Ijazah (bagi yang telah memiliki ijazah peningkatan pendidikan dan akan pindah golongan dari II/d ke III/a)</li>
+                            <li>Uraian Tugas lama dan baru sesuai jabatannya</li>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn"> Kenaikan Pangkat Struktural <img src="icons/dropdown.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <li>SK CPNS dan SK PNS</li>
+                            <li>SK Kenaikan Pangkat Terakhir</li>
+                            <li>SK Jabatan Lama dan Baru</li>
+                            <li>SK Pemberhentian dari Jabatan Fungsional Tertentu (bagi yang pindah jabatan)</li>
+                            <li>Berita Acara Pelantikan / Surat Pernyataan Pelantikan (SPP, SPMT, SPMJ)</li>
+                            <li>Telah membuat data kinerja melalui aplikasi e-kinerja Kementerian Perhubungan</li>
+                            <li>SKP, Realisasi, Evaluasi Kinerja 2 (dua) tahun terakhir (1 paket masing-masing maksimal 2MB)</li>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn"> Kenaikan Pangkat Sedang dan atau Selesai Tugas Belajar <img src="icons/dropdown.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <li>SK CPNS dan SK PNS</li>
+                            <li>SK Kenaikan Pangkat Terakhir</li>
+                            <li>SK Tugas Belajar</li>
+                            <li>SK Pemberhentian dari Jabatan Fungsional Tertentu (bagi yang pindah jabatan)</li>
+                            <li>SKP selama pendidikan diterbitkan oleh Sekolah / Kampus berdasarkan Nilai Indeks Prestasi / IP</li>
+                            <li>Ijazah Peningkatan Pendidikan (bagi yang telah selesai tugas belajar)</li>
+                            <li>Pengakuan / Pengesahan dari DIKTI (bagi yang tugas belajar di luar negeri)</li>
                         </div>
                     </div>
                 </div>

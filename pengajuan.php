@@ -69,23 +69,25 @@ if ($statusPengajuan == 'pending') {
             <!-- end navbar -->
             <!-- start content -->
             <div class="main">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <div class="wrapper">
-                    <div class="teks">
-                        <p>Upload berkas anda dalam bentuk pdf</p>
-                    </div>
-                    <div class="upload-container">
-                        <h2>Upload Your Files</h2>
-                        <div class="upload-area" id="upload-area">
-                            Drop your files here or click to select.
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="wrapper">
+                        <div class="teks">
+                            <p>Upload berkas anda dalam bentuk pdf</p>
                         </div>
-                        <input type="file" id="file-input" multiple name="file" style="display: none;">
-                        <ul class="file-list" id="file-list"></ul>
+                        <div class="upload-container">
+                            <h2>Upload Your Files</h2>
+                            <div class="upload-area" id="upload-area">
+                                Drop your files here or click to select.
+                            </div>
+                            <input type="file" id="file-input" multiple name="file" style="display: none;">
+                            <ul class="file-list" id="file-list"></ul>
+                        </div>
+                        <div class="wrapper-submit">
+                            <a href="dashboardUser.php"><button class="submit" name="submit">Submit</button></a>
+                        </div>
                     </div>
-                    <button class="submit" name="submit" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
             <!-- end content -->
         </div>
     </div>
