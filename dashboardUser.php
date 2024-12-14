@@ -29,7 +29,7 @@ $statusPengajuan = statusTerakhir($userId, $koneksi);
         </div>
         <div class="navbar-nav">
             <div class="teks">
-                <h1>SELAMAT DATANG</h1>
+                <h1>SELAMAT DATANG <?php echo htmlspecialchars($_SESSION['nama']); ?></h1>
             </div>
             <div class="nav-main">
                 <a href="dashboardUser.php">Home</a>
@@ -118,4 +118,5 @@ $statusPengajuan = statusTerakhir($userId, $koneksi);
 <?php
 
 ?>
+
 </html>

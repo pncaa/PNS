@@ -235,10 +235,13 @@ option {
 
 /* start css file persyartan.php */
 .dropdown-wrapper {
-    max-width: 80vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown-wrapper .dropdown {
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
     overflow: hidden;
@@ -271,8 +274,10 @@ option {
     font-size: 12px;
 }
 
-.dropdown-content p {
+.dropdown-content ol {
     margin: 0;
+    padding: 0px 15px;
+    
 }
 
 .dropdown.active .dropdown-content {
