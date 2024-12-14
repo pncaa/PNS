@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'functions.php';
-ceckLogin();
+cekLogin();
 
 ?>
 <!DOCTYPE html>

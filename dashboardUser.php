@@ -2,7 +2,7 @@
 session_start();
 require 'koneksi.php';
 require 'functions.php';
-ceckLogin();
+cekLogin();
 
 $userId = $_SESSION['user_id'];
 $statusPengajuan = statusTerakhir($userId, $koneksi);

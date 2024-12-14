@@ -2,7 +2,7 @@
 session_start();
 require 'koneksi.php';
 require 'functions.php';
-ceckLogin();
+cekLogin();
 
 if (isset($_POST["submit"])) {
     if (registrasi($_POST) > 0) {
@@ -135,6 +135,10 @@ if (isset($_POST["submit"])) {
     </div>
 
 </body>
+
+<script>
+     document.getElementById('tglPengangkatan').setAttribute('max', new Date().toISOString().split('T')[0]);
+</script>
 
 <?php
 function registrasi($data)

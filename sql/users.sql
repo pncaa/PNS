@@ -6,3 +6,6 @@ CREATE TABLE users (
     password VARCHAR(255),
     FOREIGN KEY (user_id) REFERENCES data_user(id) ON DELETE CASCADE
 );
+
+--nip admin: 112233
+--password admin: Andy123

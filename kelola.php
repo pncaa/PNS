@@ -2,7 +2,7 @@
 session_start();
 require 'koneksi.php';
 require 'functions.php';
-ceckLogin();
+cekLogin();
 
 if (isset($_POST['approve']) || isset($_POST['reject'])) {
     $id = $_POST['id'];
