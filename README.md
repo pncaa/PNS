@@ -77,7 +77,7 @@ PHP (Untuk pemrosesan data, autentifikasi, dan logika aplikasi) dan MySQL (Untuk
 | Role              | Nama                 | NIM        |
 |-------------------|----------------------|--------------------------|
 | Ketua dan Front-End Developer | Panca Aziz Saputra         | H1D023033 |
-| UI/UX Designer  | Yohana Des Igrid Patricia Butarbutar    | H1D023031 |
+| UI/UX Designer  | Yohana Des Ingrid Patricia Butarbutar    | H1D023031 |
 | Back-End Developer    | Adeyunita Rachmadhani        | H1D023057 |
 
 
